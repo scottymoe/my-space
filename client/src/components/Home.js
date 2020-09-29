@@ -18,10 +18,12 @@ const Home = () => {
     try {
       let res = await axios.get('/api/profiles');
       console.log(res.data);
+      setProfiles(res.data);
     } catch (error) {
       alert("Error getting your friends");
     }
   };
+
   
   useEffect(() => {
     getFriends();

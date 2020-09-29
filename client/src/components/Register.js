@@ -29,7 +29,7 @@ const Register = (props) => {
     }
   };
   
-
+  console.log(authErrors)
   return (
     <div>
       {authErrors && (

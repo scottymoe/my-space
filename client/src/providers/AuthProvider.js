@@ -21,7 +21,6 @@ const AuthProvider = (props ) => {
       console.log("response", res);
       
       setUser(res.data.data);
-      debugger;
       history.push("/")
     } catch (err) {
       console.log(err)
