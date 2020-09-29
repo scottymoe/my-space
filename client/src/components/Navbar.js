@@ -43,6 +43,7 @@ const styles = {
   navbar: {
     width: "100%",
     background: "blue",
+    text: "black",
     padding: "10px",
     display: "flex",
     justifyContent: "space-between",

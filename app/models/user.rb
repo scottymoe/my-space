@@ -8,11 +8,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-  # serialize :liked_profiles, Array
+  serialize :friend_profiles, Array
 
-  def liked_profiles
+  def self.discover(ids)
+    ids = ids.empty? ? [0] : ids
+    Profile.where("id NOT IN(?)",ids).order("RANDOM()")
   end
 
-  def random_profiles
+  def self.friend_profiles(ids)
+    ids = ids.empty? ? [0] : ids
+    Profile.where("id IN (?)", ids)
   end
 end

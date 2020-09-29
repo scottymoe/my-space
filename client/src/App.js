@@ -9,7 +9,8 @@ import FetchUser from "./components/FetchUser"
 import Home from "./components/Home";
 import NoMatch from "./components/NoMatch";
 import Register from "./components/Register";
-import Login from "./components/Login"
+import Login from "./components/Login";
+import MyFriends from "./components/MyFriends";
 // import ProtectedRoute from "/components/ProtectedRoute";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route exact path = "/login" component={Login} />
             <Route exact path="/about" component={About} />
             <Route exact path="/items" components={Items} />
+            <Route exact path='/my_profiles' component={MyFriends} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
