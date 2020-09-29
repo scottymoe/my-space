@@ -7,7 +7,7 @@ const MyFriends = () => {
 
   async function getFriends() {
     try {
-      let res = await axios.get("/api/my_profiles");
+      let res = await axios.get("/api/profiles");
       setProfiles(res.data);
     } catch (err) {
       alert("you have no friends yet")

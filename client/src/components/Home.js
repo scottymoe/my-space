@@ -54,7 +54,7 @@ const Home = () => {
           </Card.Content>
           <Card.Content extra>
             <Button color="red" icon basic onClick={removeFriend}>
-              <Icon name="thumbs down" />
+              <Icon circular name='users'/>
             </Button>
             <Button color="green" icon basic onClick={() => friend(profile.id)}>
               <Icon name="thumbs up" />
