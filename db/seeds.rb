@@ -11,3 +11,10 @@
     description: Faker::Lorem.sentence,
   )
 end
+
+50.times do
+  Profile.create(
+    name: Faker::Name.name,
+    status: Faker::Lorem.sentence
+  )
+end
