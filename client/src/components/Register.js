@@ -32,13 +32,13 @@ const Register = (props) => {
   console.log(authErrors)
   return (
     <div>
-      {authErrors && (
+      {/* {authErrors && (
         <>
           {authErrors.map((err) => (
             <p>{err}</p>
           ))}
         </>
-      )}
+      )} */}
 
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>

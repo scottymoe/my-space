@@ -3,12 +3,13 @@ import axios from "axios";
 import { Card, Divider,} from "semantic-ui-react";
 
 const MyFriends = () => {
-  const [profiles, setProfiles] = useState([]);
+  const [friends, setFriends] = useState([]);
 
   async function getFriends() {
     try {
-      let res = await axios.get("/api/profiles");
-      setProfiles(res.data);
+      let res = await axios.get("/api/my_profiles");
+      
+      setFriends(res.data);
     } catch (err) {
       alert("you have no friends yet")
     }
@@ -20,11 +21,12 @@ const MyFriends = () => {
 
   return (
     <Card.Group itemsPerRow={4}>
-      {profiles.map((profile) => (
-        <Card key={profile.id}>
+      {friends.map((friend) => (
+        <Card key={friend.id}>
           <Card.Content>
+            <Card.Header>{friend.name}</Card.Header>
             <Divider />
-            <Card.Header>{profile.name}</Card.Header>
+            <Card.Description>{friend.status}</Card.Description>
           </Card.Content>
         </Card>
       ))}

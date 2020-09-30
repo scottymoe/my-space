@@ -24,7 +24,7 @@ const AuthProvider = (props ) => {
       history.push("/")
     } catch (err) {
       console.log(err)
-      debugger;
+      
       setAuthErrors(err)
     } finally {
       setAuthLoading(false)

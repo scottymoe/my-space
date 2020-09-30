@@ -9,4 +9,8 @@ class Api::ProfilesController < ApplicationController
     current_user.friend_profiles << params[:id].to_i
     current_user.save
   end
+
+  def my_profiles
+    render json: User.friends(current_user.friend_profiles)
+  end
 end

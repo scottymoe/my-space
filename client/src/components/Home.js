@@ -1,10 +1,11 @@
 import React, { useState, useEffect}  from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
-import { Header, Card, Icon, Image, Button } from 'semantic-ui-react';
+import { Header, Card, Icon, Button } from 'semantic-ui-react';
 
 const Home = () => {
   const [profiles, setProfiles] = useState([]);
+  
   const friend = async (id) => {
     let res = axios.put(`/api/profiles/${id}`);
 
@@ -57,7 +58,7 @@ const Home = () => {
               <Icon circular name='users'/>
             </Button>
             <Button color="green" icon basic onClick={() => friend(profile.id)}>
-              <Icon name="thumbs up" />
+              <Icon circular name='users' />
             </Button>
           </Card.Content>
         </Card>
