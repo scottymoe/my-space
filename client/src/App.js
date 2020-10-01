@@ -11,7 +11,7 @@ import NoMatch from "./components/NoMatch";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import MyFriends from "./components/MyFriends";
-// import Posts from './components/Post';
+import Posts from './components/Post';
 // import ProtectedRoute from "/components/ProtectedRoute";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/items" components={Items} />
             <Route exact path='/my_profiles' component={MyFriends} />
-            {/* <Route exact path="/api/profiles/:profile_id/posts" component={Posts} /> */}
+            <Route exact path="/api/profiles/:profile_id/posts" component={Posts} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>

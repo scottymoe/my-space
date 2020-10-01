@@ -29,7 +29,7 @@ const MyFriends = () => {
             <Divider />
             <Card.Description>{friend.status}</Card.Description>
           </Card.Content>
-          {/* <Link to='/api/profiles/profile_id/posts'> View Posts</Link> */}
+          <Link to='/api/profiles/profile_id/posts'> View Posts</Link>
         </Card>
       ))}
     </Card.Group>
