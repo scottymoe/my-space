@@ -28,12 +28,14 @@ const MyFriends = () => {
             <Card.Header>{friend.name}</Card.Header>
             <Divider />
             <Card.Description>{friend.status}</Card.Description>
+            <Divider />
+            <Link to='/api/profiles/profile_id/posts'> View Posts</Link>
           </Card.Content>
-          <Link to='/api/profiles/profile_id/posts'> View Posts</Link>
         </Card>
-      ))}
+      ))};
     </Card.Group>
-      
+    
   );
 };
+
 export default MyFriends;

@@ -11,18 +11,18 @@ const Navbar = () => {
         <>
         <div
           onClick = {() => handleLogout(history)}
-          style={{color:"steelblue"}}
+          style={styles.navtext}
           >
-          logout!
+          Logout
           </div>
         </>
       );
     } else{
       return(
         <>
-          <Link to="/register"> register</Link>
+          <Link style={styles.navtext} to="/register">Register</Link>
           <span style={{marginRight: "10px"}}></span>
-          <Link to="/login"> login </Link>
+          <Link style={styles.navtext} to="/login">Login</Link>
         </>
       );
     }
@@ -31,7 +31,7 @@ const Navbar = () => {
   return(
     <div style={styles.navbar}>
       <div>
-        <Link to="/">Home</Link>
+        <Link style={styles.navtext} to="/">Home</Link>
         <span style={{marginRight: "10px"}}></span>
       </div>
       <div>{getRightNav()}</div>
@@ -42,12 +42,18 @@ const Navbar = () => {
 const styles = {
   navbar: {
     width: "100%",
+    height: "50px",
     backgroundColor: "blue",
-    color: "black",
     padding: "10px",
     display: "flex",
     justifyContent: "space-between",
   },
+  navtext: {
+    color: "white",
+    fontFamily: "Roboto",
+    fontSize: "2em",
+  }
+
 };
 
 export default Navbar;
